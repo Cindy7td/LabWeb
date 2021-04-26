@@ -1,6 +1,8 @@
 import ProjectCard from "./ProjectCard"
 import NavBar from "./NavBar"
 import Row from 'react-bootstrap/Row';
+
+import Button from 'react-bootstrap/Button';
 import '../App.css';
 export default function CatalogProjects() 
 {
@@ -8,23 +10,20 @@ export default function CatalogProjects()
     <>
          <NavBar></NavBar>
          <div className="center">
-         <h1>Projects</h1>
-        
+         
+         <div> <h1>Projects Catalog</h1> <Button variant="success">Añadir</Button></div>
+        <div>
             <Row>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
-            </Row>
-            <Row>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
-            </Row>
-            <Row>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
@@ -32,6 +31,7 @@ export default function CatalogProjects()
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
             </Row>
           
+            </div>
             </div>
     </>
     )

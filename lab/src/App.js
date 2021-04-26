@@ -4,10 +4,14 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import "bootswatch/dist/darkly/bootstrap.min.css";
+import "bootswatch/dist/journal/bootstrap.min.css";
 //import 'bootstrap/dist/css/bootstrap.css';
 import TasksContainer from './Componentes/TasksContainer'
 import CatalogProjects from './Componentes/CatalogProjects'
+import Singin from './Componentes/Sigin';
+import Login from './Componentes/Login';
+import TaskForm from './Componentes/TaskForm';
+import ProjectForm from './Componentes/ProjectForm';
 function App() {
   return (
     <Router>
@@ -19,13 +23,19 @@ function App() {
           <TasksContainer ></TasksContainer>
         </Route>
         <Route path="/login">
-          <TasksContainer ></TasksContainer>
+          <Login></Login>
         </Route>
         <Route path="/signin">
-          <TasksContainer ></TasksContainer>
+          <Singin ></Singin>
+        </Route>
+        <Route path="/TaskForm">
+          <TaskForm ></TaskForm>
+        </Route>
+        <Route path="/ProjectForm">
+          <ProjectForm ></ProjectForm>
         </Route>
         <Route path="/">
-          <TasksContainer ></TasksContainer>
+        <Login></Login>
         </Route>
     </Switch>
     </Router>
