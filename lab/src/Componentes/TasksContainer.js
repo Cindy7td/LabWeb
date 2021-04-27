@@ -1,5 +1,5 @@
-import Tasks from "./Tasks"
-import NavBar from "./NavBar"
+import Tasks from "./Tasks";
+import NavBar from "./NavBar";
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 export default function TasksContainer() 
@@ -11,7 +11,7 @@ export default function TasksContainer()
            
             <div> <h1>Tasks</h1> <Button variant="success">Añadir</Button></div>
             <div>
-            <Row>
+            <Row style={{marginLeft:'8px'}}>
                 <Tasks name= "hOLA" descrip="somedescrip" date="20/10/2021"status="todo" ></Tasks>
                 <Tasks name= "hOLA" descrip="somedescrip" date="20/10/2021"status="todo" ></Tasks>
                 <Tasks name= "hOLA" descrip="somedescrip" date="20/10/2021"status="todo" ></Tasks>

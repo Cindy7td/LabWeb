@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import React, { useState } from "react";
-import NavBar from "./NavBar"
+import NavBar from "./NavBar";
 
 export default function Singin() 
 {

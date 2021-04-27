@@ -1,5 +1,5 @@
-import ProjectCard from "./ProjectCard"
-import NavBar from "./NavBar"
+import ProjectCard from "./ProjectCard";
+import NavBar from "./NavBar";
 import Row from 'react-bootstrap/Row';
 
 import Button from 'react-bootstrap/Button';
@@ -13,7 +13,7 @@ export default function CatalogProjects()
          
          <div> <h1>Projects Catalog</h1> <Button variant="success">Añadir</Button></div>
         <div>
-            <Row>
+            <Row style={{marginLeft:'7px' }}>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>
                 <ProjectCard name= "hOLA" descrip="somedescrip" status="todo"></ProjectCard>

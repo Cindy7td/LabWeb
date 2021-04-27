@@ -5,9 +5,8 @@ import {
   Route
 } from "react-router-dom";
 import "bootswatch/dist/journal/bootstrap.min.css";
-//import 'bootstrap/dist/css/bootstrap.css';
-import TasksContainer from './Componentes/TasksContainer'
-import CatalogProjects from './Componentes/CatalogProjects'
+import TasksContainer from './Componentes/TasksContainer';
+import CatalogProjects from './Componentes/CatalogProjects';
 import Singin from './Componentes/Sigin';
 import Login from './Componentes/Login';
 import TaskForm from './Componentes/TaskForm';

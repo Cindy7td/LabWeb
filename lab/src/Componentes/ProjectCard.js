@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 export default function  ProjectCard(props) 
 {
     return (
-        <Card style={{ width: '18rem', margin: '10px'}} border="info   ">
+        <Card style={{ width: '18rem', margin: '5px'}} border="info   ">
         <Card.Header><h4>{props.name}</h4></Card.Header>
         <Card.Body>
             <Card.Text> {props.descrip} </Card.Text>
