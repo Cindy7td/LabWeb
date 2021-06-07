@@ -1,2 +1,2 @@
-heroku buildpacks
-web: npm start
+heroku/nodejs
+heroku config:set USE_NPM_INSTALL=true
