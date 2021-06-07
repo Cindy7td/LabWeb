@@ -2,11 +2,8 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import NavBar from "./NavBar";
 import { useState } from "react";
 import { db } from "../Config";
-import app from "../base"
-import { useFirebaseApp } from 'reactfire';
 
 // Handling how to add a new projects
 export default function ProjectForm(props) 
@@ -16,8 +13,6 @@ export default function ProjectForm(props)
         description:'',
         owner: ''
     });
-    
-    const firebase = useFirebaseApp();
 
     // Handler of the changes on the form
     const handleInputChange = e =>{

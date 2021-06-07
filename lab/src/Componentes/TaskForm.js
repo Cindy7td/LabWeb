@@ -2,7 +2,6 @@ import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import NavBar from "./NavBar";
 import {useState} from "react";
 import {db} from "../Config";
 

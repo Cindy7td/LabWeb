@@ -2,7 +2,6 @@ import ProjectCard from "./ProjectCard";
 import NavBar from "./NavBar";
 import Row from 'react-bootstrap/Row';
 import React, {useEffect,useState} from 'react';
-import Button from 'react-bootstrap/Button';
 import '../App.css';
 import { db } from "../Config";
 import ProjectForm from "./ProjectForm";
@@ -11,7 +10,6 @@ import ProjectForm from "./ProjectForm";
 export default function CatalogProjects() 
 {
     const [myProjects,setMyProjects] = useState([])
-    const [currentId,setCurrentId] = useState(myProjects[0]);
 
     // Logic for the database to add projects
     const getList = async () => {   
