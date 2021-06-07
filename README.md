@@ -3,8 +3,11 @@
 ToDo Project App es una herramienta web que facilita el manejo y administración de proyectos y tareas. 
 
 Es necesario tener instalado:
+
 Node: https://nodejs.org/es/
+
 Firebase: pm install --save firebase 
+
 Reactfire: npm install reactfire
 
 1. Clonar el repositorio. 
