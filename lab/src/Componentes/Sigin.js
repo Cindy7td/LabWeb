@@ -4,35 +4,40 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import React, { useState } from "react";
 import NavBar from "./NavBar";
+import 'firebase/auth';
+import { useFirebaseApp } from 'reactfire';
 
+// Class in charge of user registration
 export default function Singin() 
 {
-    const [user, setUser] = useState({
-      
-        userName: "",
-        name: "",
-        email: "",
-        password: "",
-      });
+    const [ username, setUsername ] = useState('');
+    const [ name, setName ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ password, setPassword ] = useState('');
 
-    function onChange(event) { setUser({[event.target.name]: event.target.value}) }
+    const firebase = useFirebaseApp();
+
+    const submit = async ()=>{
+        await firebase.auth().createUserWithEmailAndPassword(email, password);
+    }
+
     return (
      <>
      <NavBar></NavBar>
      <Container>
-         <h1>Registrarse</h1>
+         <h1>Sign up</h1>
      </Container>
      <Container>
      <Form>
      <Form.Row>
         <Form.Group as ={Col} >
-            <Form.Label>userName</Form.Label>
+            <Form.Label>Username</Form.Label>
             <Form.Control 
             type="text" 
             name="userName" 
-            placeholder="Enter userName" 
-            value={user.userName} 
-            onChange={onChange}  
+            placeholder="Enter username" 
+            value={username} 
+            onChange={ (ev)=> setUsername(ev.target.value) } 
             required 
             />
             
@@ -42,9 +47,9 @@ export default function Singin()
             <Form.Control 
             type="text"
             name="name" 
-            placeholder="Name"  
-            value={user.name} 
-            onChange={onChange} 
+            placeholder="Enter name"  
+            value={name} 
+            onChange={ (ev)=> setName(ev.target.value) } 
             required />
         </Form.Group>
      </Form.Row>
@@ -54,10 +59,9 @@ export default function Singin()
             <Form.Control 
             type="email" 
             placeholder="Enter email"  
-            name="email"
-            pattern="^[a-zA-Z0-9._-]+@[a-zA-Z-]+\.[a-zA-Z]+" 
-            value={user.email} 
-            onChange={onChange} 
+            name="email" 
+            value={email} 
+            onChange={ (ev)=> setEmail(ev.target.value) } 
             required
             />
             <Form.Text className="text-muted">
@@ -68,15 +72,19 @@ export default function Singin()
             <Form.Label>Password</Form.Label>
             <Form.Control 
             type="password" 
-            placeholder="Password" 
+            placeholder="Enter Password" 
             name="password" 
-            value={user.password}  
-            onChange={onChange} 
+            value={password}  
+            onChange={ (ev)=> setPassword(ev.target.value) }
             required
             />
         </Form.Group>
      </Form.Row>
-        <Button variant="primary" type="submit">
+        <Button 
+            variant="primary" 
+            type="submit" 
+            onClick={submit}
+            aref = "/Projects">
             Submit
         </Button>
     </Form>

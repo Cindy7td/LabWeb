@@ -3,17 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import firebaseConfig from './firebase_config';
+import { FirebaseAppProvider } from 'reactfire'
 
-firebase.auth().signOut().then(() => {
-  // Sign-out successful.
-}).catch((error) => {
-  // An error happened.
-});
 
-ReactDOM.render(
-  <React.StrictMode>
+ReactDOM.render((
+  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
     <App />
-  </React.StrictMode>,
+  </FirebaseAppProvider>
+  ),
   document.getElementById('root')
 );
 

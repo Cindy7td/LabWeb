@@ -7,25 +7,30 @@ import {
 import "bootswatch/dist/journal/bootstrap.min.css";
 import TasksContainer from './Componentes/TasksContainer';
 import CatalogProjects from './Componentes/CatalogProjects';
-import Singin from './Componentes/Sigin';
+
+import SignUp from './Componentes/Sigin';
 import Login from './Componentes/Login';
 import TaskForm from './Componentes/TaskForm';
 import ProjectForm from './Componentes/ProjectForm';
+import  {AuthProvider}  from "./AuthProvider";
 function App() {
+
   return (
+    <AuthProvider>
     <Router>
       <Switch>
         <Route path="/Projects">
-         <CatalogProjects ></CatalogProjects>
+         <CatalogProjects username="user1" ></CatalogProjects>
         </Route>
         <Route path="/Tasks">
           <TasksContainer ></TasksContainer>
         </Route>
         <Route path="/login">
-          <Login></Login>
+          <Login>
+          </Login>
         </Route>
         <Route path="/signin">
-          <Singin ></Singin>
+          <SignUp ></SignUp>
         </Route>
         <Route path="/TaskForm">
           <TaskForm ></TaskForm>
@@ -36,8 +41,9 @@ function App() {
         <Route path="/">
         <Login></Login>
         </Route>
-    </Switch>
+      </Switch>
     </Router>
+    </AuthProvider>
   );
 }
 
